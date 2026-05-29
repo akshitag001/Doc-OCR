@@ -1,0 +1,15 @@
+node_modules
+__pycache__
+.env
+uploads/
+results/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.egg-info
+*.cache
+*.pytest_cache
+*.DS_Store

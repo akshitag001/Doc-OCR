@@ -1,0 +1,44 @@
+# Env
+.env
+.env.*
+!.env.example
+
+# Data and generated files
+data/
+backend/uploads/
+backend/results/
+backend/*.png
+backend/*.jpg
+backend/*.jpeg
+backend/*.pdf
+backend/*_enhanced.png
+backend/test_*.png
+backend/test_*.jpg
+backend/test_*.jpeg
+backend/test_*.pdf
+Sem_1_result (1).pdf
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/.turbo/
+frontend/.vercel/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Assistant files
+frontend/CLAUDE.md
+frontend/AGENTS.md

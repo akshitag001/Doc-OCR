@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+opencv-python-headless
+easyocr
+pytesseract
+pdf2image
+google-generativeai
+pydantic
+python-dotenv
+pytest
+pytest-asyncio
+httpx
+aiofiles
