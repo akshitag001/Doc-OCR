@@ -31,6 +31,9 @@ class ExtractionResult(BaseModel):
     confidence: Dict[str, float] = {}
     rawText: Optional[str] = None
     errorMessage: Optional[str] = None
+    fileUrl: Optional[str] = None
+    thumbnailUrl: Optional[str] = None
+    blocks: Optional[list] = None
     createdAt: datetime
     updatedAt: datetime
 

@@ -18,6 +18,9 @@ type ExtractionResult = {
   confidence: Record<string, number>;
   rawText?: string;
   errorMessage?: string | null;
+  fileUrl?: string;
+  thumbnailUrl?: string;
+  blocks?: any[];
 };
 
 function getDocumentTypeIcon(docType?: string) {
@@ -106,7 +109,7 @@ export default function ResultsPage({ params }: { params: { id: string } }) {
   return (
     <div className="flex flex-col md:flex-row gap-8 p-6">
       <div className="md:w-1/3">
-        <DocumentPreview />
+        <DocumentPreview fileUrl={result?.thumbnailUrl || result?.fileUrl} blocks={result?.blocks || []} />
       </div>
       <div className="flex-1 space-y-6">
         <div className="flex items-center gap-2">

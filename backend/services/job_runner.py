@@ -130,6 +130,18 @@ def _run_pipeline(job_id: str, file_path: str, filename: str) -> None:
         
         # Step 4: Build and save result
         logger.info(f"[{job_id}] Step 4: Saving results...")
+        
+        # Generate thumbnail
+        thumbnail_url = None
+        try:
+            thumb_path = _ocr_service.get_document_thumbnail(file_path, job_id)
+            if thumb_path:
+                thumbnail_url = f"/uploads/thumbs/{Path(thumb_path).name}"
+        except Exception as e:
+            logger.error(f"Failed to generate thumbnail: {e}")
+            
+        file_url = f"/uploads/{Path(file_path).name}"
+        
         result = ExtractionResult(
             id=job_id,
             status="completed",
@@ -140,6 +152,9 @@ def _run_pipeline(job_id: str, file_path: str, filename: str) -> None:
             confidence=extraction_data.get("confidence", {}),
             rawText=raw_text,
             documentType=extraction_data.get("documentType"),
+            fileUrl=file_url,
+            thumbnailUrl=thumbnail_url,
+            blocks=blocks,
             createdAt=datetime.now(),
             updatedAt=datetime.now(),
         )
