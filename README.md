@@ -1,4 +1,4 @@
-# Doc-OCR 📄🤖
+# Doc-OCR
 
 Doc-OCR is a state-of-the-art, production-ready, full-stack document understanding system designed to automatically transform raw, unstructured academic certificates, marksheets, and official credentials into highly structured, verified academic records in clean JSON format. 
 
@@ -6,7 +6,7 @@ By utilizing advanced **Computer Vision**, a hybrid multi-engine **OCR pipeline*
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 *   **Multi-Format Document Ingestion**: Upload PDFs, PNGs, and JPEGs up to 10MB. Multi-page PDFs are automatically split, processed, and merged.
 *   **Dual-Engine OCR Pipeline**: A hybrid OCR framework combining EasyOCR (deep-learning-based) and Tesseract (pattern-matching-based fallback) for high-accuracy text extraction.
@@ -17,7 +17,7 @@ By utilizing advanced **Computer Vision**, a hybrid multi-engine **OCR pipeline*
 
 ---
 
-## 🏗️ Architecture & Data Flow
+## Architecture and Data Flow
 
 The platform is designed with a modern, decoupled microservices architecture:
 
@@ -49,7 +49,7 @@ The platform is designed with a modern, decoupled microservices architecture:
 
 ---
 
-## 🧠 Deep Dive: How the AI/ML Works
+## AI and ML Pipeline Details
 
 Doc-OCR's backend relies on a pipeline of advanced machine learning and computer vision techniques:
 
@@ -71,7 +71,7 @@ Traditional OCR gives you a bag of words with page coordinates. To turn this int
 
 ---
 
-## 🛠️ Local Installation & Setup
+## Local Installation and Setup
 
 ### Prerequisites
 *   Python 3.10+
@@ -120,7 +120,7 @@ npm run dev
 
 ---
 
-### 🐳 Run with Docker (Recommended)
+### Run with Docker (Recommended)
 You do not need to install Python, Node, or Tesseract on your system when deploying through Docker.
 
 1. Create your root `.env` and fill in your `GEMINI_API_KEY`.
@@ -132,7 +132,7 @@ You do not need to install Python, Node, or Tesseract on your system when deploy
 
 ---
 
-## 📂 API Specifications
+## API Specifications
 
 ### `POST /api/documents/process`
 Uploads a document to start an extraction job.
@@ -170,7 +170,7 @@ Fetches the current status and extracted JSON for a specific job.
 
 ---
 
-## 🔮 Future Roadmap & Ideas
+## Future Roadmap and System Expansion
 
 We are actively designing the next phase of Doc-OCR. Future improvements include:
 
